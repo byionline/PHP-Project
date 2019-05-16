@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Two-Tier Dropdown - jsFiddle demo</title>
+  
+  <script type='text/javascript' src='../bower_components/jquery/dist/jquery.js'></script>
+  
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+  
+  
+  <script type="text/javascript" src="/js/lib/jquery.lint-11-06.js"></script>
+  
+  
+  <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+  
+  <style type='text/css'>
+    
+  </style>
+  
+
+
+<script type='text/javascript'>//<![CDATA[ 
+$(function(){
+$(".dropdown").hide();
+
+$("#firstDropdown").on("change", function() {
+    $(".dropdown").hide();
+    var value = $("#firstDropdown").val();
+    $("#dropdown" + value).show();
+});
+});//]]>  
+
+</script>
+
+<script src="http://debug.phonegap.com/target/target-script-min.js#jsf_rns"></script></head>
+<body>
+  <select id="firstDropdown">
+    <option value="">Type</option>
+    <option value="1">General</option>
+    <option value="2">Private</option>
+    <option value="3">IC</option>
+</select>
+<select id="dropdown1" class="dropdown">
+    <option>150</option>
+</select>
+<select id="dropdown2" class="dropdown">
+    <option>1500</option>
+</select>
+<select id="dropdown3" class="dropdown">
+    <option>2500</option>
+</select>
+  
+</body>
+
+
+</html>
+
